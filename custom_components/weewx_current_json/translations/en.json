@@ -1,0 +1,190 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add a WeeWX station",
+        "description": "The address of the station's current.json, written by the weewx-current-json extension. The station's web address is enough if the file is at its top level.",
+        "data": {
+          "url": "Address"
+        },
+        "data_description": {
+          "url": "Such as weather.example.com or https://weather.example.com/current.json"
+        }
+      },
+      "reconfigure": {
+        "title": "Change the station's address",
+        "data": {
+          "url": "Address"
+        },
+        "data_description": {
+          "url": "Such as weather.example.com or https://weather.example.com/current.json"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Could not fetch the file from that address.",
+      "invalid_format": "That address doesn't give a weewx-current-json file, version 1, in metric units."
+    },
+    "abort": {
+      "already_configured": "That station is already set up.",
+      "reconfigure_successful": "The station's address was changed."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Options",
+        "data": {
+          "scan_interval": "Update interval"
+        },
+        "data_description": {
+          "scan_interval": "Minutes between fetches. WeeWX writes the file every archive interval, five minutes by default."
+        }
+      }
+    }
+  },
+  "entity": {
+    "binary_sensor": {
+      "alerts": {
+        "name": "Weather alerts"
+      }
+    },
+    "sensor": {
+      "apptemp": {
+        "name": "Apparent temperature"
+      },
+      "cloudbase": {
+        "name": "Cloud base"
+      },
+      "cloudiness": {
+        "name": "Cloud cover"
+      },
+      "dewpoint": {
+        "name": "Dew point"
+      },
+      "health_warnings": {
+        "name": "Hardware warnings"
+      },
+      "heatindex": {
+        "name": "Heat index"
+      },
+      "indoor_dewpoint": {
+        "name": "Indoor dew point"
+      },
+      "indoor_humidity": {
+        "name": "Indoor humidity"
+      },
+      "indoor_temperature": {
+        "name": "Indoor temperature"
+      },
+      "lightning_distance": {
+        "name": "Lightning distance"
+      },
+      "lightning_strikes": {
+        "name": "Lightning strikes in the last hour"
+      },
+      "nh3": {
+        "name": "Ammonia"
+      },
+      "nox_index": {
+        "name": "NOx index"
+      },
+      "pb": {
+        "name": "Lead"
+      },
+      "radiation": {
+        "name": "Solar radiation"
+      },
+      "rain_last": {
+        "name": "Last rain"
+      },
+      "rain_last_24h": {
+        "name": "Rain in the last 24 hours"
+      },
+      "rain_last_hour": {
+        "name": "Rain in the last hour"
+      },
+      "rain_storm": {
+        "name": "Storm rain"
+      },
+      "rainrate": {
+        "name": "Rain rate"
+      },
+      "signal": {
+        "name": "Signal"
+      },
+      "snow_last_hour": {
+        "name": "Snow in the last hour"
+      },
+      "snowdepth": {
+        "name": "Snow depth"
+      },
+      "snowrate": {
+        "name": "Snow rate"
+      },
+      "so2": {
+        "name": "Sulphur dioxide"
+      },
+      "temperature": {
+        "name": "Temperature"
+      },
+      "today_cooldeg": {
+        "name": "Cooling degree days today"
+      },
+      "today_et": {
+        "name": "Evapotranspiration today"
+      },
+      "today_growdeg": {
+        "name": "Growing degree days today"
+      },
+      "today_heatdeg": {
+        "name": "Heating degree days today"
+      },
+      "today_lightning_strikes": {
+        "name": "Lightning strikes today"
+      },
+      "today_rain": {
+        "name": "Rain today"
+      },
+      "today_snow": {
+        "name": "Snow today"
+      },
+      "today_temperature_max": {
+        "name": "Today's high"
+      },
+      "today_temperature_min": {
+        "name": "Today's low"
+      },
+      "today_windgust_max": {
+        "name": "Today's highest gust"
+      },
+      "today_windrun": {
+        "name": "Wind run today"
+      },
+      "trend_pressure": {
+        "name": "Pressure trend"
+      },
+      "trend_temperature": {
+        "name": "Temperature trend"
+      },
+      "uv": {
+        "name": "UV index"
+      },
+      "voc_index": {
+        "name": "VOC index"
+      },
+      "windchill": {
+        "name": "Wind chill"
+      },
+      "winddegree": {
+        "name": "Wind direction"
+      },
+      "windgust": {
+        "name": "Wind gust"
+      },
+      "windspeed": {
+        "name": "Wind speed"
+      }
+    }
+  }
+}

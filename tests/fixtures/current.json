@@ -1,0 +1,183 @@
+{
+  "format": "current-conditions",
+  "version": 1,
+  "time": 1761231600,
+  "units": "metric",
+  "station": {
+    "id": "weewx",
+    "name": "Backyard Weather",
+    "latitude": 39.9524,
+    "longitude": -75.1636,
+    "altitude": 12,
+    "url": "https://weather.example.com/",
+    "attribution": {
+      "text": "Weather from Backyard Weather",
+      "url": "https://weather.example.com/"
+    },
+    "timezone": "America/New_York",
+    "utc_offset": -14400,
+    "webcam": "https://weather.example.com/webcam.jpg"
+  },
+  "observations": {
+    "temperature": 21.5,
+    "humidity": 61,
+    "dewpoint": 13.7,
+    "apptemp": 21.0,
+    "pressure": 1015.2,
+    "windspeed": 3.58,
+    "winddegree": 230,
+    "windgust": 6.26,
+    "rain": 1.27,
+    "rainrate": 0.0,
+    "radiation": 412,
+    "uv": 3.1,
+    "code": 802,
+    "cloudiness": 44,
+    "pm2_5": 8.2,
+    "aqi": 46,
+    "aqi_category": "Good",
+    "aqi_color": "#00e400"
+  },
+  "derived": {
+    "code": "sensors_clouds",
+    "cloudiness": "sensors_clouds",
+    "aqi": "us_epa"
+  },
+  "today": {
+    "temperature_max": 23.1,
+    "temperature_max_time": 1761229800,
+    "temperature_min": 11.4,
+    "temperature_min_time": 1761206400,
+    "windgust_max": 8.94,
+    "windgust_max_time": 1761224100,
+    "rain": 3.05,
+    "heatdeg": 0.0,
+    "cooldeg": 0.0,
+    "growdeg": 7.2
+  },
+  "trend": {
+    "hours": 3,
+    "pressure": -1.2,
+    "temperature": 4.6
+  },
+  "rain": {
+    "last_24h": 3.05,
+    "last": 1761228000,
+    "storm": 3.05,
+    "storm_start": 1761213600
+  },
+  "almanac": {
+    "sunrise": 1761218383,
+    "sunset": 1761257375,
+    "moon_phase": 1,
+    "moon_fullness": 4
+  },
+  "indoor": {
+    "temperature": 21.2,
+    "humidity": 45,
+    "dewpoint": 8.9
+  },
+  "sensors": [
+    {
+      "field": "extraTemp1",
+      "name": "Greenhouse",
+      "kind": "temperature",
+      "value": 24.1
+    },
+    {
+      "field": "soilMoist1",
+      "name": "Soil moisture 1",
+      "kind": "soil_moisture",
+      "value": 18
+    }
+  ],
+  "health": {
+    "batteries": {
+      "outTempBatteryStatus": 0,
+      "windBatteryStatus": 1
+    },
+    "voltages": {
+      "consBatteryVoltage": 4.62
+    },
+    "signal": {
+      "rxCheckPercent": 97
+    },
+    "warnings": [
+      {
+        "field": "windBatteryStatus",
+        "message": "Wind sensor battery low"
+      }
+    ]
+  },
+  "forecast": {
+    "source": "nws",
+    "generated": 1761228000,
+    "hourly": [
+      {
+        "time": 1761231600,
+        "end": 1761235200,
+        "daytime": true,
+        "temperature": 20.0,
+        "dewpoint": 10.0,
+        "humidity": 53,
+        "windspeed": 4.02,
+        "winddegree": 225,
+        "pop": 20,
+        "code": 521,
+        "summary": "Chance Rain Showers"
+      },
+      {
+        "time": 1761235200,
+        "end": 1761238800,
+        "daytime": true,
+        "temperature": 21.0,
+        "code": 802
+      }
+    ],
+    "periods": [
+      {
+        "name": "Tonight",
+        "time": 1761231600,
+        "end": 1761274800,
+        "daytime": false,
+        "temperature": 12.8,
+        "windspeed": 2.24,
+        "windspeed_max": 4.47,
+        "winddegree": 180,
+        "pop": 60,
+        "code": 201,
+        "summary": "Chance Showers And Thunderstorms",
+        "details": "Showers likely after 2am."
+      },
+      {
+        "name": "Friday",
+        "time": 1761274800,
+        "end": 1761318000,
+        "daytime": true,
+        "temperature": 19.0,
+        "code": 800
+      }
+    ],
+    "alerts": [
+      {
+        "id": "urn:oid:2.49.0.1.840.0.1",
+        "event": "Heat Advisory",
+        "headline": "Heat Advisory until 9 PM",
+        "severity": "Moderate",
+        "urgency": "Expected",
+        "certainty": "Likely",
+        "sender": "NWS Philadelphia PA",
+        "area": "Philadelphia",
+        "issued": 1761228000,
+        "onset": 1761228000,
+        "ends": 1761264000,
+        "expires": 1761253200
+      }
+    ]
+  },
+  "archives": {
+    "week": "history-week.json",
+    "year": "history-year.json"
+  },
+  "generator": "weewx-current-json 0.3.0; WeeWX 5.5.2"
+}
