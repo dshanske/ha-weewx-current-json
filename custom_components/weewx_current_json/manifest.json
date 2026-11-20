@@ -1,7 +1,12 @@
 {
   "domain": "weewx_current_json",
   "name": "WeeWX Current Conditions",
-  "codeowners": ["@dshanske"],
+  "categories": [
+    "weather_alerts"
+  ],
+  "codeowners": [
+    "@dshanske"
+  ],
   "config_flow": true,
   "dependencies": [],
   "documentation": "https://github.com/dshanske/ha-weewx-current-json",

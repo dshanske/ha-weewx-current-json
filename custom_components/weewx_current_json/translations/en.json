@@ -8,7 +8,7 @@
           "url": "Address"
         },
         "data_description": {
-          "url": "Such as weather.example.com or https://weather.example.com/current.json"
+          "url": "Such as {example_site} or {example_file}"
         }
       },
       "reconfigure": {
@@ -17,7 +17,7 @@
           "url": "Address"
         },
         "data_description": {
-          "url": "Such as weather.example.com or https://weather.example.com/current.json"
+          "url": "Such as {example_site} or {example_file}"
         }
       }
     },

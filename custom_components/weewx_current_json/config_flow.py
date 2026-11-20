@@ -32,6 +32,12 @@ from .coordinator import WeewxConfigEntry
 
 _LOGGER = logging.getLogger(__name__)
 
+# Example addresses, kept out of the translations, which may not contain URLs.
+EXAMPLES = {
+    "example_site": "weather.example.com",
+    "example_file": "https://weather.example.com/current.json",
+}
+
 URL_SCHEMA = vol.Schema({vol.Required(CONF_URL): TextSelector(TextSelectorConfig(type=TextSelectorType.URL))})
 
 
@@ -66,6 +72,7 @@ class WeewxConfigFlow(ConfigFlow, domain=DOMAIN):
             step_id="user",
             data_schema=self.add_suggested_values_to_schema(URL_SCHEMA, user_input),
             errors=errors,
+            description_placeholders=EXAMPLES,
         )
 
     async def async_step_reconfigure(self, user_input: dict[str, Any] | None = None) -> ConfigFlowResult:
@@ -86,6 +93,7 @@ class WeewxConfigFlow(ConfigFlow, domain=DOMAIN):
             step_id="reconfigure",
             data_schema=self.add_suggested_values_to_schema(URL_SCHEMA, user_input or {CONF_URL: entry.data[CONF_URL]}),
             errors=errors,
+            description_placeholders=EXAMPLES,
         )
 
     @staticmethod
